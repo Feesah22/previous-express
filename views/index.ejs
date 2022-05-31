@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="">
+    <title>Todolist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/font-awesome.min.css">
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+    <section>
+        <h1>Getting Ready For the day Beautie's </h1>
+        <h2>Todos Remaining: <span class="remaining"><%= noCompletedCount%> </span></h2>
+    </section>
+    <section id="inputh3">
+        <h3>First step is to smile ! :)</h3>
+        <h3>Messages</h3>
+        
+        <form action="/postToDo" method="POST" > <!--action is where to send the posted request "\quotes" -->
+            <input id="todoInput" class=toDoInput type="text" name= "input">
+            <button id="submitBtn">Submit</button>
+        </form>
+
+    </section>
+
+    <ul id="todoList" class="messages">
+    <% for(let i=0; i<toDos.length; i++) {%>  <!--JavaSript messages is coming from server.js get method when render -->
+        <li class="message">
+            <span class ="toDo <%= toDos[i].completed ? "completed ":"" %> "> <%= toDos[i].description %>  </span>
+            <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+        </li>
+        <% } %>
+</ul>
+
+
+    </ul>
+
+    
+       
+
+    <script src="/main.js"></script>
+</body>
+
+</html>

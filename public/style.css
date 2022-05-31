@@ -1,0 +1,92 @@
+ul {
+    list-style: none;
+    padding: 0em;
+    overflow-y: scroll;
+}
+
+li {
+    font-size: 1em;
+    padding-bottom: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 40%;
+    height: 14px;
+    padding-right: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid pink;
+    font-family: sans-serif;
+    padding-left: 2%;
+    overflow-x: scroll;
+}
+
+li:hover {
+    background-color: rgb(207, 201, 201);
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+body {
+
+    background-image: url("Back.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 410px;
+
+}
+
+h1 {
+    font-family: "Allura", cursive;
+    font-size: 2.5em;
+    margin-bottom: 3%;
+    text-shadow: 0 0 5px red;
+}
+
+h3 {
+    font-family: "Allura", cursive;
+    font-weight: bolder;
+    font-size: 2em;
+    margin-bottom: 1%;
+    margin-top: -2%;
+    color: white;
+    text-shadow: 0 0 6px #dd2692fa;
+}
+
+h2 {
+    text-align: center;
+    width: 50%;
+    animation: glow is ease 1s ease-in-out infinite alternate;
+}
+
+#inputh3 {
+    width: 50%;
+    text-align: center;
+
+}
+
+ul {
+    width: 50%;
+    height: 150px;
+    margin-left: 5%;
+}
+
+li {
+    display: inline-flex;
+}
+
+.buttons {
+    width: 50%;
+    text-align: center;
+}
+
+button {
+    margin-left: 6%;
+
+}
+
+input {
+    width: 50%;
+}
